@@ -1,2 +1,2 @@
-# Aprendendo java - 1
-Calculadora
+# Aprendendo java
+Essa pasta irei guarda meus códigos que criarei para construir minha base no Java
