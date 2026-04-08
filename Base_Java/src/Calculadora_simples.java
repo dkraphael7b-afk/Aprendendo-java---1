@@ -6,36 +6,44 @@ public static void main(String[] args) {
     Scanner leitor = new Scanner(System.in);
 
     //Declaração
-    int numero_1;
-    int numero_2;
+    int numero_1 = 0;
     long total;
     char operador;
+    boolean i = true;
 
     System.out.println("Digite o primeiro numero: ");
-    numero_1 = leitor.nextInt();//estrutura do leia
+    total = leitor.nextInt();//estrutura do leia
 
-    System.out.println("Digite o segundo numero: ");
-    numero_2 = leitor.nextInt();
+    while (i == true) {
 
-    //escolhendo os operadores
-    System.out.println("Escolha um operador: \n+\n-\n/\n*\n");
-    operador = leitor.next().charAt(0); //Por conta de não haver "next" com char...Adicionamos o "charAt(0)"
+        System.out.println("Resultado: " + total);
 
-    if (operador == '+') {
-        total = numero_1 + numero_2;
-        System.out.println("O resultado é " + total);
-    } else if (operador == '-') {
-        total = numero_1 - numero_2;
-        System.out.println("O resultado é " + total);
-    } else if (operador == '*') {
-        total = numero_1 * numero_2;
-        System.out.println("O resultado é " + total);
-    } else if (operador == '/') {
-        total = numero_1 / numero_2;
-        System.out.println("O resultado é " + total);
-    } else {
-        System.out.println("Erro: operador não reconhecido");
+        //escolhendo os operadores
+        System.out.println("Escolha um operador: \n+\n-\n/\n*\nC\n");
+        operador = leitor.next().charAt(0); //Por conta de não haver "next" com char...Adicionamos o "charAt(0)"
+
+        if (operador == 'C' || operador == 'c') {
+            System.out.println("Resultado: " + total + "\nProcesso encerrado");
+            i = false;
+            break;// break = pare
+        }
+
+        System.out.println("Digite o segundo numero: ");
+        numero_1 = leitor.nextInt();
+
+        if (operador == '+') {
+            total = total + numero_1;
+        } else if (operador == '-') {
+            total = total - numero_1;
+        } else if (operador == '*') {
+            total = total * numero_1;
+        } else if (operador == '/') {
+            total = total / numero_1;
+        } else {
+            System.out.print("Erro: operador não reconhecido");//aqui removi o "ln" para que fique tudo na mesma linha
+        }
     }
+
 
     leitor.close();
 
