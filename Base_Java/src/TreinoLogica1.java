@@ -1,9 +1,9 @@
 import java.util.Scanner;
 
-public class Treino_logica_1 {
+public class TreinoLogica1 {
     public static void main(String[] args) {
 
-        //Codigo melhorado...
+        //codigo melhorado...
 
         int idade;
         int score;
